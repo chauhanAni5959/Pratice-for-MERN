@@ -1,10 +1,16 @@
 import React from "react";
 
-function Sum() {
- 
-    
-    
-  return <div>I am Sum Function</div>;
-}
+const Sum = React.memo(({number}) => {
+  function Calculation() {
+    let sum = 0;
+    for (let i = 0; i < 1000; i++) {
+      sum = sum + i;
+    }
+    return sum;
+  }
+  const total = console.log("Sum Rendered");
+
+  return <div>Sum: {total}</div>;
+});
 
 export default Sum;

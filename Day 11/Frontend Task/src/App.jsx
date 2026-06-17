@@ -5,6 +5,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [number, setNumber] = useState(1000);
 
+  console.log("App Rendered");
   return (
     <div>
       <h1>Count is: {count}</h1>
@@ -15,14 +16,17 @@ function App() {
       >
         Click me
       </button>
+
       <h1>Number is: {number}</h1>
       <button
         onClick={() => {
-          setCount(number + 100);
+          setNumber(number + 100);
         }}
-      > Click me </button>
-
-      <Sum />
+      >
+        {" "}
+        Click me{" "}
+      </button>
+      <Sum number={number} />
     </div>
   );
 }
